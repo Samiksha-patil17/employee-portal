@@ -1,1 +1,16 @@
+version: 0.2
 
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install -g htmlhint
+
+  build:
+    commands:
+      - htmlhint index.html
+
+artifacts:
+  files:
+    - '**/*'
